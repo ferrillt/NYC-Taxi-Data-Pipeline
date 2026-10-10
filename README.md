@@ -117,6 +117,17 @@ A flag does not automatically establish that a record is invalid. Handling depen
 - Automate ingestion with logging and safeguards against repeated loading.
 - Develop a dashboard displaying analytical results and data quality measures.
 
+## Generated Outputs
+
+Run `01_Data_Inspection.ipynb`, followed by `02_Data_Processing.ipynb`, from the `notebooks/` folder.  
+
+Notebook 02 automatically creates the output folders and generates:
+- `data/processed/yellow_trips_2025-01_processed.parquet`
+- `data/review/yellow_trips_2025-01_period_review.parquet`
+- `reports/processing_flag_summary_2025-01.csv`
+
+The Parquet outputs are not included in this repository. They can be recreated by running Notebook 02 with the downloaded source data.  Output folders do not need to exist beforehand.  
+
 ## Author
 
 Teresa Ferrill
