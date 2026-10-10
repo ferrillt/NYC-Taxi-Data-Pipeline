@@ -43,7 +43,8 @@ The source website also provides the Yellow Trips Data Dictionary for interpreti
    ```
 
 7. Open `notebooks/01_Data_Inspection.ipynb` with the working directory set to `notebooks/`.
-8. Run all cells in order.
+8. Run all cells in order.  
+9. Open notebooks/02_Data_Processing.ipynb and run all cells in order to generate the processed datasets and flag summary.  
 
 The notebook uses relative paths to access `../data/raw/` and writes its report to `../reports/quality_report_2025-01.csv`. Rerunning the notebook replaces the existing report.
 
@@ -74,7 +75,7 @@ Inspection also identified extreme fare and distance values that require further
 
 ## Data Quality Approach
 
-The raw records remain unchanged. The quality report documents planned handling actions; it does not apply filtering or corrections.
+Raw files remain unchanged. Notebook 01 documents handling rules. Notebook 02 separates out-of-period records and adds quality flags and location descriptions. Other flagged January records remain in the processed dataset for review.  
 
 | Issue | Planned handling |
 |---|---|
@@ -101,8 +102,8 @@ A flag does not automatically establish that a record is invalid. Handling depen
 
 ## Planned Enhancements
 
-- Investigate extreme values and shared missing-value patterns.
-- Implement processing rules and retain flagged records for review.
+- Establish and evaluate upper-limit rules for extreme fares, distances, and durations.  
+- Apply analysis-specific handling rules while preserving records for review.  
 - Join pickup and drop-off location descriptions to trip records.
 - Extend validation to additional months.
 - Add SQL tables and analytical summaries.
