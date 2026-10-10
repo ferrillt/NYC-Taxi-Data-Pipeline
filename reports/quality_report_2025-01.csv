@@ -1,1 +1,15 @@
-
+rule,flagged_count,flagged_percent,planned_action
+Missing pickup timestamp,0,0.0,Exclude from time-based summaries
+Missing drop-off timestamp,0,0.0,Exclude from duration and speed calculations
+Nonpositive trip duration,2051,0.059,Exclude from duration and speed calculations
+Nonpositive trip distance,90893,2.6155,Exclude from distance and speed calculations
+Negative fare,144118,4.147,Review before use in fare summaries
+Exact duplicate beyond first occurrence,0,0.0,Review before removal
+Pickup outside January 2025,22,0.0006,Exclude from January-specific summaries
+Pickup ID missing or absent from lookup,0,0.0,Exclude from pickup geographic summaries
+Drop-off ID missing or absent from lookup,0,0.0,Exclude from drop-off geographic summaries
+Missing passenger_count,540149,15.5428,Retain record; flag field as unavailable
+Missing RatecodeID,540149,15.5428,Retain record; flag field as unavailable
+Missing store_and_fwd_flag,540149,15.5428,Retain record; flag field as unavailable
+Missing congestion_surcharge,540149,15.5428,Retain record; flag field as unavailable
+Missing Airport_fee,540149,15.5428,Retain record; flag field as unavailable
