@@ -44,7 +44,7 @@ The source website also provides the Yellow Trips Data Dictionary for interpreti
 
 7. Open `notebooks/01_Data_Inspection.ipynb` with the working directory set to `notebooks/`.
 8. Run all cells in order.  
-9. Open notebooks/02_Data_Processing.ipynb and run all cells in order to generate the processed datasets and flag summary.  
+9. Open `notebooks/02_Data_Processing.ipynb` and run all cells in order to generate the processed datasets and flag summary.  
 
 The notebook uses relative paths to access `../data/raw/` and writes its report to `../reports/quality_report_2025-01.csv`. Rerunning the notebook replaces the existing report.
 
