@@ -1,0 +1,13 @@
+flag,flagged_count,flagged_percent
+flag_missing_duration,0,0.0
+flag_nonpositive_duration,2051,0.059
+flag_missing_distance,0,0.0
+flag_nonpositive_distance,90893,2.6155
+flag_negative_fare,144118,4.147
+flag_missing_passenger_count,540149,15.5429
+flag_missing_RatecodeID,540149,15.5429
+flag_missing_store_and_fwd_flag,540149,15.5429
+flag_missing_congestion_surcharge,540149,15.5429
+flag_missing_Airport_fee,540149,15.5429
+flag_unmatched_pickup,0,0.0
+flag_unmatched_dropoff,0,0.0
