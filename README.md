@@ -2,11 +2,7 @@
 
 ## Project Overview
 
-This project uses Python to inspect NYC yellow-taxi trip records, identify potential data quality issues, and generate a validation report with documented handling rules.
-
-The goal is to develop a repeatable pipeline that transforms raw monthly files into reliable analytics while preserving the original records.  
-
-Inspects 3.48 million January 2025 NYC yellow-taxi records and generates a consolidated data quality report covering missing values, trip durations, distances, fares, duplicates, and location references. Automated processing, SQL integration, and dashboard development are planned. 
+This project inspects 3.48 million January 2025 NYC yellow-taxi records and generates a consolidated data quality report covering missing values, trip durations, distances, fares, duplicates, and location references. Automated processing, SQL integration, and dashboard development are planned.
 
 ## Current Status
 
