@@ -104,11 +104,10 @@ A flag does not automatically establish that a record is invalid. Handling depen
 
 - Establish and evaluate upper-limit rules for extreme fares, distances, and durations.  
 - Apply analysis-specific handling rules while preserving records for review.  
-- Join pickup and drop-off location descriptions to trip records.
-- Extend validation to additional months.
-- Add SQL tables and analytical summaries.
-- Automate ingestion with logging and safeguards against repeated loading.
-- Develop a dashboard displaying analytical results and data quality measures.
+- Extend validation to additional months.  
+- Add SQL tables and analytical summaries.  
+- Automate ingestion with logging and safeguards against repeated loading.  
+- Develop a dashboard displaying analytical results and data quality measures.  
 
 ## Generated Outputs
 
