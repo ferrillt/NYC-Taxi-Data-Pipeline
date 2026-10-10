@@ -6,7 +6,7 @@ This project inspects 3.48 million January 2025 NYC yellow-taxi records and gene
 
 ## Current Status
 
-January 2025 data inspection, quality reporting, initial processing, and descriptive trip activity analytics are complete.  
+January 2025 data inspection, quality reporting, initial processing, descriptive trip activity analytics, DuckDB SQL analytics, and comparison with pandas are complete.  
 
 ## Data Sources
 
@@ -52,7 +52,8 @@ The source website also provides the Yellow Trips Data Dictionary for interpreti
    
 7. From the `notebooks/` working directory, open `01_Data_Inspection.ipynb` and run all cells in order.  
 8. Run all cells in `02_Data_Processing.ipynb` to generate processed datasets and the flag summary.  
-9. Run all cells in `03_Trip_Analytics.ipynb` to generate activity summaries and charts.  
+9. Run all cells in `03_Trip_Analytics.ipynb` to generate activity summaries and charts.
+10. Run all cells in `04_SQL_Analytics.ipynb' to generate SQL results.  
 
 The notebook uses relative paths to access `../data/raw/` and writes its report to `../reports/quality_report_2025-01.csv`. Rerunning the notebook replaces the existing report.
 
@@ -115,7 +116,7 @@ A flag does not automatically establish that a record is invalid. Handling depen
 - Establish and evaluate upper-limit rules for extreme fares, distances, and durations.  
 - Apply analysis-specific handling rules while preserving records for review.  
 - Extend validation to additional months.  
-- Add SQL tables and analytical summaries.  
+- DuckDB queries over Parquet are implemented. Automated ingestion and dashboard development remain planned. 
 - Automate ingestion with logging and safeguards against repeated loading.  
 - Develop a dashboard displaying analytical results and data quality measures.  
 
