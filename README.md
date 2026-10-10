@@ -6,7 +6,7 @@ This project inspects 3.48 million January 2025 NYC yellow-taxi records and gene
 
 ## Current Status
 
-January 2025 data inspection, quality reporting, and initial processing are complete.
+January 2025 data inspection, quality reporting, initial processing, and descriptive trip activity analytics are complete.  
 
 ## Data Sources
 
@@ -25,9 +25,14 @@ The source website also provides the Yellow Trips Data Dictionary for interpreti
 |---|---|
 | `notebooks/01_Data_Inspection.ipynb` | Inspection, validation checks, findings, and report generation. |
 | `notebooks/02_Data_Processing.ipynb` | Reporting-period separation, quality flags, location joins, and exports. |
+| `notebooks/03_Trip_Analytics.ipynb` | Daily, hourly, and borough activity summaries, charts, and interpretation. |
 | `data/raw/taxi_zone_lookup.csv` | Taxi-zone reference data. |
+| `reports/daily_trip_counts_2025-01.csv` | Recorded pickups by date. |
+| `reports/hourly_trip_counts_2025-01.csv` |	Recorded pickups by hour. |
+| `reports/pickup_borough_counts_2025-01.csv` |	Recorded pickups by borough or lookup category. |
 | `reports/processing_flag_summary_2025-01.csv` | Quality-flag counts and percentages for January records.|
 | `reports/quality_report_2025-01.csv` | Validation counts, percentages, and planned handling actions. |
+| `reports/figures/' |	Daily, hourly, and borough activity charts. |
 
 ## How to Run
 
@@ -36,15 +41,18 @@ The source website also provides the Yellow Trips Data Dictionary for interpreti
 3. Expand the **2025** section and download January's **Yellow Taxi Trip Records**.
 4. Place `yellow_tripdata_2025-01.parquet` in `data/raw/`.
 5. Use a Python environment with Jupyter Notebook or JupyterLab.
-6. Install the required data-processing packages:
+6. Installation command: use your requirements file:
 
    ```bash
-   python -m pip install pandas pyarrow
+   python -m pip install -r requirements.txt
+
    ```
 
-7. Open `notebooks/01_Data_Inspection.ipynb` with the working directory set to `notebooks/`.
-8. Run all cells in order.  
-9. Open `notebooks/02_Data_Processing.ipynb` and run all cells in order to generate the processed datasets and flag summary.  
+   Run this command from the repository root.
+   
+8. Open `notebooks/01_Data_Inspection.ipynb` with the working directory set to `notebooks/`.
+9. Run all cells in order.  
+10. Open `notebooks/02_Data_Processing.ipynb` and run all cells in order to generate the processed datasets and flag summary.  Open notebooks/03_Trip_Analytics.ipynb and run all cells to generate activity summaries and charts.  
 
 The notebook uses relative paths to access `../data/raw/` and writes its report to `../reports/quality_report_2025-01.csv`. Rerunning the notebook replaces the existing report.
 
@@ -76,6 +84,8 @@ Inspection also identified extreme fare and distance values that require further
 ## Data Quality Approach
 
 Raw files remain unchanged. Notebook 01 documents handling rules. Notebook 02 separates out-of-period records and adds quality flags and location descriptions. Other flagged January records remain in the processed dataset for review.  
+
+Notebook 03 includes flagged January records in activity counts; these counts describe recorded activity rather than verified completed trips.
 
 | Issue | Planned handling |
 |---|---|
@@ -117,6 +127,8 @@ Notebook 02 automatically creates the output folders and generates:
 - `data/processed/yellow_trips_2025-01_processed.parquet`
 - `data/review/yellow_trips_2025-01_period_review.parquet`
 - `reports/processing_flag_summary_2025-01.csv`
+
+Notebook 03 reads the processed January Parquet file and generates three activity-summary CSVs in reports/ and three PNG charts in reports/figures/. These CSVs and charts are included in the repository.
 
 The Parquet outputs are not included in this repository. They can be recreated by running Notebook 02 with the downloaded source data.  Output folders do not need to exist beforehand.  
 
