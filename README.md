@@ -6,17 +6,7 @@ This project inspects 3.48 million January 2025 NYC yellow-taxi records and gene
 
 ## Current Status
 
-**January 2025 data inspection and quality reporting are complete.**
-
-Completed work includes:
-- Loading and inspecting 3,475,226 trip records.
-- Examining data types, missing values, and summary statistics.
-- Checking trip durations, distances, and negative fares.
-- Checking exact duplicate rows and pickups outside January.
-- Validating pickup and drop-off location IDs against the taxi-zone lookup table.
-- Exporting a consolidated quality report with planned handling actions.
-
-Data processing, SQL integration, automated ingestion, and dashboard development are planned.
+January 2025 data inspection, quality reporting, and initial processing are complete.
 
 ## Data Sources
 
