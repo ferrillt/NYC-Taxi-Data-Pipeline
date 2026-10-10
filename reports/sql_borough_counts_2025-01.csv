@@ -1,0 +1,9 @@
+pickup_borough,record_count,percent_of_records
+Bronx,14741,0.42
+Brooklyn,66070,1.9
+EWR,377,0.01
+Manhattan,3089258,88.89
+Missing borough description,1380,0.04
+Queens,294981,8.49
+Staten Island,256,0.01
+Unknown,8141,0.23

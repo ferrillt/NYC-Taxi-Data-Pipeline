@@ -1,0 +1,4 @@
+summary,matches_pandas,summary_rows,total_records
+daily,True,31,3475204
+hourly,True,24,3475204
+borough,True,8,3475204
