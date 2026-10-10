@@ -32,7 +32,7 @@ The source website also provides the Yellow Trips Data Dictionary for interpreti
 | `reports/pickup_borough_counts_2025-01.csv` |	Recorded pickups by borough or lookup category. |
 | `reports/processing_flag_summary_2025-01.csv` | Quality-flag counts and percentages for January records.|
 | `reports/quality_report_2025-01.csv` | Validation counts, percentages, and planned handling actions. |
-| `reports/figures/' |	Daily, hourly, and borough activity charts. |
+| `reports/figures/` |	Daily, hourly, and borough activity charts. |
 
 ## How to Run
 
