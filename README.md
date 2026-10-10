@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project inspects 3.48 million January 2025 NYC yellow-taxi records and generates a consolidated data quality report covering missing values, trip durations, distances, fares, duplicates, and location references. Automated processing, SQL integration, and dashboard development are planned.
+This project inspects 3.48 million January 2025 NYC yellow-taxi records and generates a consolidated data quality report covering missing values, trip durations, distances, fares, duplicates, and location references. SQL integration, automated ingestion, and dashboard development are planned.
 
 ## Current Status
 
@@ -24,7 +24,9 @@ The source website also provides the Yellow Trips Data Dictionary for interpreti
 | Path | Description |
 |---|---|
 | `notebooks/01_Data_Inspection.ipynb` | Inspection, validation checks, findings, and report generation. |
+| `notebooks/02_Data_Processing.ipynb` | Reporting-period separation, quality flags, location joins, and exports. |
 | `data/raw/taxi_zone_lookup.csv` | Taxi-zone reference data. |
+| `reports/processing_flag_summary_2025-01.csv` | Quality-flag counts and percentages for January records.|
 | `reports/quality_report_2025-01.csv` | Validation counts, percentages, and planned handling actions. |
 
 ## How to Run
